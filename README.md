@@ -13,3 +13,5 @@ part of Currency Application currency-exchange-service   ,  currency-conversion-
 
 6.Configure JPA and Initialized Data , If you are Spring Boot >=2.5.0, You would need to configure this in   application.properties -spring.jpa.defer-datasource-initialization=true 
   OR use schema.sql instead of data.sql
+
+7.Create a JPA Repository and then call from controller instead of hardcoded values.and the url will be http://localhost:8000/currency-exchange/from/USD/to/INR
