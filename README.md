@@ -15,3 +15,18 @@ part of Currency Application currency-exchange-service   ,  currency-conversion-
   OR use schema.sql instead of data.sql
 
 7.Create a JPA Repository and then call from controller instead of hardcoded values.and the url will be http://localhost:8000/currency-exchange/from/USD/to/INR
+
+
+* Step 20 - Connect Currency Conversion Microservice & Currency Exchange Microservice to Eureka
+
+/currency-exchange-service/pom.xml Modified
+New Lines
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+/currency-exchange-service/src/main/resources/application.properties Modified
+New Lines
+
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
